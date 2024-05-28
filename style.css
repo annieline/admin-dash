@@ -5,8 +5,16 @@ body {
 
     display: grid;
 
-    grid-template-columns: 300px auto;
-    grid-template-rows: 100px auto;
+    grid-template-columns: 250px auto;
+    grid-template-rows: 150px auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 .sidebar{
@@ -15,9 +23,48 @@ body {
 }
 
 .header {
+    display: grid;
+    grid-template-rows: 50% 50%;
     background-color: pink;
 }
 
+.header-element {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .main-content{
-    background-color: red;
+    background-color: grey;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    padding-left: 2em;
+    padding-right: 2em;
+    
+    .card-container{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3,1fr);
+        gap: 2em;
+        margin: 1em 2em 2em 0;
+
+        .card {
+            background-color: white;
+            padding: 2em;
+            text-align: left;
+
+        h4 {
+            margin: 0;
+        }
+        p {
+            margin-top: 0px;
+            margin-bottom: 2em;
+        }
+        .btn-bar{
+            float: right;
+        }
+
+        }
+    }
+    
 }
