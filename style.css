@@ -24,14 +24,18 @@ a {
 
 .header {
     display: grid;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: repeat(2, 50%);
     background-color: pink;
-}
+    .header-element {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 2em 0 2em;
 
-.header-element {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+        .search-bar input[type=search] {
+            width: 40vw;
+        }
+    }
 }
 
 .main-content{
@@ -63,8 +67,18 @@ a {
         .btn-bar{
             float: right;
         }
-
         }
     }
+    .main-side {
+        display: grid;
+        grid-template-rows: 400px 400px ;
+        height: 100%;
+        .sides {
+            background-color: white;
+            height: 300px;
+            width: 100%;
+        }
+    }
+
     
 }
